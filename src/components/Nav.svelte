@@ -1,68 +1,43 @@
 <script lang="ts">
 	export let segment: string;
+
+	let pages = [
+		{ link: "about", display: "About" },
+		{ link: "contact", display: "Contact" },
+	];
 </script>
 
 <style>
 	nav {
-		border-bottom: 1px solid rgba(255,62,0,0.1);
-		font-weight: 300;
-		padding: 0 1em;
-		display: flex;
-		align-items: center;
-		background-color: hsl(190, 77%, 30%);
-		color: white;
-	}
-
-	ul {
-		margin: 0;
-		padding: 0;
-	}
-
-	/* clearfix */
-	ul::after {
-		content: '';
-		display: block;
-		clear: both;
-	}
-
-	li {
-		display: block;
-		float: left;
-	}
-
-	[aria-current] {
-		position: relative;
-		display: inline-block;
-	}
-
-	[aria-current]::after {
-		position: absolute;
-		content: '';
-		width: calc(100% - 1em);
-		height: 2px;
-		background-color: rgb(255,62,0);
-		display: block;
-		bottom: -1px;
-	}
-
-	a {
-		text-decoration: none;
-		padding: 1em 0.5em;
-		display: block;
-		color: white;
-	}
-
-	.brand {
-		margin: 0 auto;
+		padding: 16px 0;
 	}
 </style>
 
-<nav>
-	<ul>
-		<li><a aria-current="{segment === undefined ? 'page' : undefined}" href=".">home</a></li>
-		<li><a aria-current="{segment === 'about' ? 'page' : undefined}" href="about">about</a></li>
-	</ul>
-	<div class="brand">
-		<h2><a href=".">Erik Brakke Web Design</a></h2>
+<nav class="navbar navbar-light navbar-expand-lg bg-light">
+	<div class="container-fluid">
+		<a href="." class="navbar-brand">Erik Brakke Web Design</a>
+		<button
+			class="navbar-toggler"
+			type="button"
+			data-bs-toggle="collapse"
+			data-bs-target="#navbarLinks"
+			aria-controls="navbarLinks"
+			aria-expanded="false"
+			aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon" />
+		</button>
+		<div class="collapse navbar-collapse" id="navbarLinks">
+			<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+				{#each pages as page}
+					<li class="nav-item">
+						<a
+							class="nav-link"
+							class:active={segment === page.link}
+							aria-current={segment === page.link ? 'page' : undefined}
+							href={page.link}>{page.display}</a>
+					</li>
+				{/each}
+			</ul>
+		</div>
 	</div>
 </nav>

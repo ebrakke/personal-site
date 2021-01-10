@@ -1,20 +1,20 @@
 <script lang="ts">
-	import Nav from '../components/Nav.svelte';
+	import Footer from "../components/Footer.svelte";
+	import InfoHeader from "../components/InfoHeader.svelte";
+	import Nav from "../components/Nav.svelte";
 
 	export let segment: string;
 </script>
 
 <style>
 	main {
-		margin-top: 16px;
-		padding: 24px;
-		background-color: hsl(190, 77%, 98%);
-		height: 100vh;
+		min-height: 70vh;
 	}
 </style>
 
-<Nav {segment}/>
-
-<main class="container is-fluid">
-	<slot></slot>
+<InfoHeader />
+<Nav {segment} />
+<main>
+	<slot />
 </main>
+<Footer />

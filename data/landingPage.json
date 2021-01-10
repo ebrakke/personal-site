@@ -1,0 +1,57 @@
+{
+    "features": [
+        {
+            "title": "Mobile First Design",
+            "description": "A majority of users are now accessing the web via smartphones rather than desktop PCs. By designing for the mobile web first, this ensures that your customers will have a great experience, regardless of the device they are using",
+            "iconClass": "bi-phone-fill"
+        },
+        {
+            "title": "Optimized For SEO",
+            "description": "SEO optimization is what will drive potential clients to your site. When a customer searches for your business in Google, I want to make sure that your business is what comes up first. I implement best practices in SEO so your customers will find you when they need you.",
+            "iconClass": "bi-search"
+        },
+        {
+            "title": "No Wordpress",
+            "description": "Wordpress can stand in the way of solving your problems. It requires constant updates for security patches, and potentially paying extra money for features that are easy to implement without wordpress. I offer a 100% custom solution that is easy to maintain so you can focus on your business and I can focus on your website.",
+            "iconClass": "bi-code-slash"
+        }
+    ],
+    "services": [
+        {
+            "service": "Basic Site",
+            "price": "$200 / month",
+            "description":
+                "Perfect for any small business that needs to provide information to their customers",
+            "features": [
+                "Up to 5 pages",
+                "Google analytics",
+                "Mobile and desktop design",
+                "Web hosting",
+                "Unlimited Revisions",
+                "Support and maintenance"
+            ]
+        },
+        {
+            "service": "Ecommerce Site",
+            "price": "$350 / month",
+            "description":
+                "Need to setup an online shop? This option is perfect for you!",
+            "features": [
+                "All of the basic plan, plus:",
+                "Online Store",
+                "Online Ordering (for restaurants)"
+            ]
+        },
+        {
+            "service": "Custom Web Application",
+            "price": "Contact for quote",
+            "description":
+                "If you are looking to a build a custom web application, I can help with that too! The sky is the limit for what we can build.",
+            "features": [
+                "User management and database integration",
+                "Fast responsive web application",
+                "Much much more!"
+            ]
+        }
+    ]
+}
